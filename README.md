@@ -27,7 +27,7 @@ An easy to use PHP UPS Library for tracking, rates and address validation
 
 Validating an address can be useful to ensure an address that a user provides can be shipped to.
 
-```
+```php
 $address = new Address();
 $address->setStreet('1001 North Alameda Street');
 $address->setStateProvinceCode('CA');
@@ -47,7 +47,7 @@ try {
 
 If an address fails, validating the region can help you determine if the city, state and zip is valid even if the street address isn't.
 
-```
+```php
 $address = new Address();
 $address->setStreet('xx North Alameda Street');
 $address->setStateProvinceCode('CA');
