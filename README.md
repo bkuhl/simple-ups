@@ -36,7 +36,7 @@ Then run `composer update`.
 <a name="usage" />
 ## Usage
 
-SimpleUPS is available in a static context with the following methods:
+SimpleUPS is currently only available in a static context with the following methods:
 
  * SimpleUPS::getRates()
  * SimpleUPS::isValidRegion()
