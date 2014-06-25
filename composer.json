@@ -1,5 +1,5 @@
 {
-    "name": "bkuhl/SimpleUPS",
+    "name": "bkuhl/simple-ups",
     "description": "Fetch rates, track packages and verify addresses via the UPS API",
     "keywords": ["ups"],
     "type": "library",

@@ -2,9 +2,12 @@
 
 An easy to use PHP UPS Library for tracking, rates and address validation
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bkuhl/simple-ups/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bkuhl/simple-ups/?branch=master)
+
 ## README Contents
 
 * [Features](#features)
+* [Installation](#installation)
 * [Usage](#usage)
   * [Address Validation](#address-validation)
   * [Region Validation](#region-validation)
@@ -18,6 +21,17 @@ An easy to use PHP UPS Library for tracking, rates and address validation
  * **Address Correction** - If an address is invalid, we'll help you correct it
  * **Track Packages** - See current status, recent activity, delivery requirements (signature, etc.), insurance details and more
  * **Shipping Rates** - Get shipping estimates for packages
+
+<a name="installation" />
+## Installation
+
+You can install the library via [Composer](http://getcomposer.org) by adding the following line to the **require** block of your *composer.json* file:
+
+````
+"bkuhl/simple-ups": "dev-master"
+````
+
+Then run `composer update`.
 
 <a name="usage" />
 ## Usage
