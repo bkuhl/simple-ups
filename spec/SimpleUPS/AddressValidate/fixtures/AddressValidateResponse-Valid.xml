@@ -1,0 +1,15 @@
+<?xml version='1.0' standalone='yes'?>
+<Response>
+    <AddressKeyFormat>
+        <AddressClassification>
+            <Code>123</Code>
+        </AddressClassification>
+        <AddressLine>1234 Broadway</AddressLine>
+        <PoliticalDivision2>San Diego</PoliticalDivision2>
+        <PoliticalDivision1>CA</PoliticalDivision1>
+        <PostcodePrimaryLow>12345</PostcodePrimaryLow>
+        <PostcodeExtendedLow>1234</PostcodeExtendedLow>
+        <CountryCode>US</CountryCode>
+    </AddressKeyFormat>
+    <ValidAddressIndicator />
+</Response>
