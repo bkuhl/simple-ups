@@ -1,0 +1,22 @@
+{
+    "name": "bkuhl/SimpleUPS",
+    "description": "Fetch rates, track packages and verify addresses via the UPS API",
+    "keywords": ["ups"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Kuhl",
+            "email": "benkuhl@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "SimpleUPS\\": "src/"
+        }
+    }
+}

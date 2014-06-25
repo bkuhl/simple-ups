@@ -24,6 +24,26 @@ An easy to use PHP UPS Library for tracking, rates and address validation
 <a name="usage" />
 ## Usage
 
+SimpleUPS is available in a static context with the following methods:
+
+SimpleUPS::getRates()
+SimpleUPS::isValidRegion()
+SimpleUPS::getSuggestedRegions()
+SimpleUPS::trackByTrackingNumber()
+SimpleUPS::isValidAddress()
+SimpleUPS::getCorrectedAddress()
+SimpleUPS::getSuggestedAddresses()
+SimpleUPS::setAuthentication()
+SimpleUPS::getAccountNumber()
+SimpleUPS::getAccessLicenseNumber()
+SimpleUPS::getPassword()
+SimpleUPS::getUserId()
+SimpleUPS::setShipper()
+SimpleUPS::getShipper()
+SimpleUPS::setCurrencyCode()
+SimpleUPS::setDebug()
+SimpleUPS::getDebugOutput()
+
 <a name="address-validation" />
 ### Address Validation
 
