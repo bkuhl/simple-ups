@@ -124,14 +124,13 @@ class Response extends \SimpleUPS\Api\Response
             $addressesInResponse[] = $address;
         }
 
-        $response = new Response($this->address);
         //if address is valid, provide the full valid address
         if (isset($xml->ValidAddressIndicator)) {
-            $response->setIsValidAddress(true);
-            $response->setCorrectedAddress($addressesInResponse[0]);
+            $this->setIsValidAddress(true);
+            $this->setCorrectedAddress($addressesInResponse[0]);
         } elseif (isset($xml->AmbiguousAddressIndicator)) {
             foreach ($addressesInResponse as $address) {
-                $response->addSuggestedAddress($address);
+                $this->addSuggestedAddress($address);
             }
         }
 
