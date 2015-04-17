@@ -11,13 +11,35 @@ use SimpleUPS\Api\InvalidParameterException;
 class Address extends \SimpleUPS\Model implements \JsonSerializable
 {
 
-    private
-        $street,
-        $city,
-        $stateProvinceCode,
-        $postalCode,
-        $postalCodeExtended,
-        $countryCode;
+    /**
+     * @var string
+     */
+    private $street;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $stateProvinceCode;
+
+    /**
+     * @var string
+     */
+    private $postalCode;
+
+    /**
+     * @var string
+     */
+    private $postalCodeExtended;
+
+    /**
+     * @var string
+     */
+    private $countryCode;
 
     /**
      * Set the street
@@ -48,6 +70,7 @@ class Address extends \SimpleUPS\Model implements \JsonSerializable
      * @param string $city
      *
      * @throws \SimpleUPS\Api\InvalidParameterException
+     * @return Address
      */
     public function setCity($city)
     {
@@ -75,6 +98,7 @@ class Address extends \SimpleUPS\Model implements \JsonSerializable
      * @param string $stateProvinceCode
      *
      * @throws \SimpleUPS\Api\InvalidParameterException
+     * @return Address
      */
     public function setStateProvinceCode($stateProvinceCode)
     {

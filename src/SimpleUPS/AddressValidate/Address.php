@@ -5,13 +5,13 @@
  */
 class Address extends \SimpleUPS\Address implements \JsonSerializable
 {
-    protected
-        $CLASSIFICATION_UNKNOWN = 0,
-        $CLASSIFICATION_COMMERCIAL = 1,
-        $CLASSIFICATION_RESIDENTIAL = 2;
+    protected $CLASSIFICATION_UNKNOWN = 0;
 
-    private
-        $classification;
+    protected $CLASSIFICATION_COMMERCIAL = 1;
+
+    protected $CLASSIFICATION_RESIDENTIAL = 2;
+
+    private $classification;
 
     /**
      * @internal
