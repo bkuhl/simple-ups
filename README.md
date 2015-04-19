@@ -2,7 +2,7 @@
 
 An easy to use PHP UPS Library for tracking, rates and address validation
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bkuhl/simple-ups/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bkuhl/simple-ups/?branch=master)
+[![Total Downloads](https://poser.pugx.org/bkuhl/simple-ups/downloads.svg)](https://packagist.org/packages/bkuhl/simple-ups) [![License](https://poser.pugx.org/bkuhl/simple-ups/license.svg)](https://packagist.org/packages/bkuhl/simple-ups) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bkuhl/simple-ups/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bkuhl/simple-ups/?branch=master)
 
 ## README Contents
 
