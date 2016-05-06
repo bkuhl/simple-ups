@@ -3,7 +3,7 @@
 /**
  * @since 1.0
  */
-class Address extends \SimpleUPS\Address
+class Address extends \SimpleUPS\InstructionalAddress
 {
     protected
         $CLASSIFICATION_UNKNOWN = 0,
