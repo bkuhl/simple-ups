@@ -115,12 +115,18 @@ class Response extends \SimpleUPS\Api\Response
             $address->setIsResponse();
             $address
                 ->setClassification($suggestedAddress->AddressClassification->Code)
-                ->setStreet($suggestedAddress->AddressLine)
+                ->setStreet($suggestedAddress->AddressLine[0])
                 ->setCity($suggestedAddress->PoliticalDivision2)
                 ->setStateProvinceCode($suggestedAddress->PoliticalDivision1)
                 ->setPostalCode($suggestedAddress->PostcodePrimaryLow)
                 ->setPostalCodeExtended($suggestedAddress->PostcodeExtendedLow)
                 ->setCountryCode($suggestedAddress->CountryCode);
+            if (!empty($suggestedAddress->AddressLine[1])) {
+                $address->setAddressLine2($suggestedAddress->AddressLine[1]);
+                if (!empty($suggestedAddress->AddressLine[2])) {
+                    $address->setAddressLine3($suggestedAddress->AddressLine[2]);
+                }
+            }
             $addressesInResponse[] = $address;
         }
 

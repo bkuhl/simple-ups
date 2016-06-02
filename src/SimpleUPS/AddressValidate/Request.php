@@ -66,6 +66,12 @@ class Request extends \SimpleUPS\Api\Request
         $addressRequest->appendChild($address = $dom->createElement('AddressKeyFormat'));
 
         $address->appendChild($dom->createElement('AddressLine', $this->getAddress()->getStreet()));
+        if ($this->getAddress()->getAddressLine2()) {
+            $address->appendChild($dom->createElement('AddressLine', $this->getAddress()->getAddressLine2()));
+            if ($this->getAddress()->getAddressLine3()) {
+                $address->appendChild($dom->createElement('AddressLine', $this->getAddress()->getAddressLine3()));
+            }
+        }
         if ($this->getAddress()->getCity() != null) {
             $address->appendChild($dom->createElement('PoliticalDivision2', $this->getAddress()->getCity()));
         }
