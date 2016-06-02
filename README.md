@@ -32,7 +32,7 @@ You can install the library via [Composer](http://getcomposer.org) by running:
 composer require bkuhl/simple-ups:1.*
 ````
 
-Then run `composer update`.
+ > 1.* versions will maintain PHP 5.3 compatibility.  `dev-master` will increase the PHP version requirement for future, 2.* versions.
 
 <a name="usage" />
 ## Usage
