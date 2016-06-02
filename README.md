@@ -8,6 +8,7 @@ An easy to use PHP UPS Library for tracking, rates and address validation
 
 * [Features](#features)
 * [Installation](#installation)
+* [Requirements](#requirements)
 * [Usage](#usage)
   * [Address Validation](#address-validation)
   * [Region Validation](#region-validation)
@@ -25,10 +26,10 @@ An easy to use PHP UPS Library for tracking, rates and address validation
 <a name="installation" />
 ## Installation
 
-You can install the library via [Composer](http://getcomposer.org) by adding the following line to the **require** block of your *composer.json* file:
+You can install the library via [Composer](http://getcomposer.org) by running:
 
 ````
-"bkuhl/simple-ups": "1.0"
+composer require bkuhl/simple-ups:1.*
 ````
 
 Then run `composer update`.
