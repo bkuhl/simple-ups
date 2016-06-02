@@ -8,16 +8,38 @@ use SimpleUPS\Api\InvalidParameterException;
  * and forth between objects.
  * @since 1.0
  */
-class Address extends \SimpleUPS\Model
+class Address extends \SimpleUPS\Model implements \JsonSerializable
 {
 
-    private
-        $street,
-        $city,
-        $stateProvinceCode,
-        $postalCode,
-        $postalCodeExtended,
-        $countryCode;
+    /**
+     * @var string
+     */
+    private $street;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $stateProvinceCode;
+
+    /**
+     * @var string
+     */
+    private $postalCode;
+
+    /**
+     * @var string
+     */
+    private $postalCodeExtended;
+
+    /**
+     * @var string
+     */
+    private $countryCode;
 
     /**
      * Set the street
@@ -48,6 +70,7 @@ class Address extends \SimpleUPS\Model
      * @param string $city
      *
      * @throws \SimpleUPS\Api\InvalidParameterException
+     * @return Address
      */
     public function setCity($city)
     {
@@ -75,6 +98,7 @@ class Address extends \SimpleUPS\Model
      * @param string $stateProvinceCode
      *
      * @throws \SimpleUPS\Api\InvalidParameterException
+     * @return Address
      */
     public function setStateProvinceCode($stateProvinceCode)
     {
@@ -216,5 +240,20 @@ class Address extends \SimpleUPS\Model
             $address->setCountryCode((string)$xml->CountryCode);
 
         return $address;
+    }
+
+    /**
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array(
+            'street' => $this->getStreet(),
+            'city' => $this->getCity(),
+            'stateProvinceCode' => $this->getStateProvinceCode(),
+            'postalCode' => $this->getPostalCode(),
+            'postalCodeExtended' => $this->getPostalCodeExtended(),
+            'countryCode' => $this->getCountryCode(),
+        );
     }
 }
