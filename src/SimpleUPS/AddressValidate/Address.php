@@ -3,7 +3,7 @@
 /**
  * @since 1.0
  */
-class Address extends \SimpleUPS\InstructionalAddress implements \JsonSerializable
+class Address extends \SimpleUPS\InstructionalAddress
 {
     protected $CLASSIFICATION_UNKNOWN = 0;
 
@@ -64,16 +64,5 @@ class Address extends \SimpleUPS\InstructionalAddress implements \JsonSerializab
     public function isResidential()
     {
         return $this->getClassification() == $this->CLASSIFICATION_RESIDENTIAL;
-    }
-
-    /**
-     * @return array
-     */
-    public function jsonSerialize()
-    {
-        return array_merge(
-            parent::jsonSerialize(),
-            array('classification' => $this->getClassification())
-        );
     }
 }
