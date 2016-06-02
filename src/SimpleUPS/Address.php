@@ -1,6 +1,7 @@
 <?php namespace SimpleUPS;
 
 use SimpleUPS\Api\InvalidParameterException;
+use JsonSerializable;
 
 /**
  * Information about an address
@@ -8,7 +9,7 @@ use SimpleUPS\Api\InvalidParameterException;
  * and forth between objects.
  * @since 1.0
  */
-class Address extends \SimpleUPS\Model
+class Address extends \SimpleUPS\Model implements JsonSerializable
 {
 
     /**
@@ -240,5 +241,20 @@ class Address extends \SimpleUPS\Model
             $address->setCountryCode((string)$xml->CountryCode);
 
         return $address;
+    }
+
+    /**
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array(
+            'street' => $this->getStreet(),
+            'city' => $this->getCity(),
+            'stateProvinceCode' => $this->getStateProvinceCode(),
+            'postalCode' => $this->getPostalCode(),
+            'postalCodeExtended' => $this->getPostalCodeExtended(),
+            'countryCode' => $this->getCountryCode(),
+        );
     }
 }
