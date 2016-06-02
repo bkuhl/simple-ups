@@ -121,9 +121,9 @@ class Response extends \SimpleUPS\Api\Response
                 ->setPostalCode($suggestedAddress->PostcodePrimaryLow)
                 ->setPostalCodeExtended($suggestedAddress->PostcodeExtendedLow)
                 ->setCountryCode($suggestedAddress->CountryCode);
-            if ($suggestedAddress->AddressLine[1]) {
+            if (!empty($suggestedAddress->AddressLine[1])) {
                 $address->setAddressLine2($suggestedAddress->AddressLine[1]);
-                if ($suggestedAddress->AddressLine[2]) {
+                if (!empty($suggestedAddress->AddressLine[2])) {
                     $address->setAddressLine3($suggestedAddress->AddressLine[2]);
                 }
             }
